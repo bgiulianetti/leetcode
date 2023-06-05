@@ -37,9 +37,8 @@ func isAnagram(s string, t string) bool {
 		return false
 	}
 
-	sArray := []rune(s)
-	for i := 0; i < len(sArray); i++ {
-		t = strings.Replace(t, fmt.Sprintf("%c", sArray[i]), "", 1)
+	for i := 0; i < len(s); i++ {
+		t = strings.Replace(t, fmt.Sprintf("%c", s[i]), "", 1)
 	}
 	return t == ""
 
